@@ -5,6 +5,11 @@
     const themeText = document.getElementById('theme-text');
     const body = document.body;
     
+    // Exit early if required elements don't exist
+    if (!themeToggle || !themeIcon || !themeText) {
+        return;
+    }
+    
     // Check for saved theme preference or default to 'light'
     const currentTheme = localStorage.getItem('theme') || 'light';
     
