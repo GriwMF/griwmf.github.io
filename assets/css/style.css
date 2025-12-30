@@ -25,20 +25,20 @@
 
 /* Dark Space Theme */
 body[data-theme="dark"] {
-    --bg-primary: #0a0e27;
-    --bg-secondary: #1a1f3a;
-    --bg-header: linear-gradient(135deg, #0f1729 0%, #1a0f2e 50%, #0f1729 100%);
-    --bg-footer: linear-gradient(135deg, #0f1729 0%, #1a0f2e 50%, #0f1729 100%);
-    --text-primary: #e0e6ff;
-    --text-secondary: #a8b3cf;
-    --text-meta: #6b7a99;
-    --text-light: #e0e6ff;
-    --border-color: #2d3561;
-    --link-color: #64b5f6;
-    --link-hover: #90caf9;
-    --tag-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --code-bg: #1a1f3a;
-    --shadow: rgba(100, 181, 246, 0.2);
+    --bg-primary: #0d0d0d;
+    --bg-secondary: #1a1a1a;
+    --bg-header: linear-gradient(135deg, #1a1a1a 0%, #2a1a3a 50%, #1a1a1a 100%);
+    --bg-footer: linear-gradient(135deg, #1a1a1a 0%, #2a1a3a 50%, #1a1a1a 100%);
+    --text-primary: #e8e8e8;
+    --text-secondary: #b0b0b0;
+    --text-meta: #888888;
+    --text-light: #e8e8e8;
+    --border-color: #333333;
+    --link-color: #bb86fc;
+    --link-hover: #d4b3ff;
+    --tag-bg: linear-gradient(135deg, #7a4dbd 0%, #9a67ea 100%);
+    --code-bg: #1a1a1a;
+    --shadow: rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -52,14 +52,14 @@ body {
 /* Starfield background for dark theme */
 body[data-theme="dark"] {
     background: 
-        radial-gradient(2px 2px at 20% 30%, white, transparent),
-        radial-gradient(2px 2px at 60% 70%, white, transparent),
-        radial-gradient(1px 1px at 50% 50%, white, transparent),
-        radial-gradient(1px 1px at 80% 10%, white, transparent),
-        radial-gradient(2px 2px at 90% 60%, white, transparent),
-        radial-gradient(1px 1px at 33% 80%, white, transparent),
-        radial-gradient(1px 1px at 15% 90%, white, transparent),
-        #0a0e27;
+        radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.5), transparent),
+        radial-gradient(1px 1px at 80% 10%, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 33% 80%, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1px 1px at 15% 90%, rgba(255, 255, 255, 0.3), transparent),
+        #0d0d0d;
     background-size: 200% 200%;
     background-position: 0% 0%;
     animation: starfield 200s linear infinite;
@@ -87,7 +87,7 @@ body[data-theme="dark"] {
 }
 
 body[data-theme="dark"] .site-header {
-    box-shadow: 0 2px 15px rgba(100, 181, 246, 0.3);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
 }
 
 .site-title {
@@ -100,7 +100,7 @@ body[data-theme="dark"] .site-header {
 }
 
 body[data-theme="dark"] .site-title {
-    text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+    text-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
 }
 
 .site-nav {
@@ -120,7 +120,7 @@ body[data-theme="dark"] .site-title {
 
 .site-nav a:hover {
     opacity: 0.7;
-    text-shadow: 0 0 8px rgba(100, 181, 246, 0.8);
+    text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
 }
 
 /* Theme Switcher Button */
@@ -145,13 +145,13 @@ body[data-theme="dark"] .site-title {
 }
 
 body[data-theme="dark"] .theme-switcher {
-    border-color: #64b5f6;
-    box-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+    border-color: #bb86fc;
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.2);
 }
 
 body[data-theme="dark"] .theme-switcher:hover {
-    background: rgba(100, 181, 246, 0.2);
-    box-shadow: 0 0 15px rgba(100, 181, 246, 0.5);
+    background: rgba(187, 134, 252, 0.1);
+    box-shadow: 0 0 15px rgba(187, 134, 252, 0.3);
 }
 
 /* Main Content */
@@ -168,7 +168,7 @@ body[data-theme="dark"] .theme-switcher:hover {
 }
 
 body[data-theme="dark"] .home h1 {
-    text-shadow: 0 0 20px rgba(100, 181, 246, 0.3);
+    text-shadow: 0 0 20px rgba(187, 134, 252, 0.2);
 }
 
 .home .intro {
@@ -192,7 +192,7 @@ body[data-theme="dark"] .home h1 {
 }
 
 body[data-theme="dark"] .post-list-item {
-    background: rgba(26, 31, 58, 0.3);
+    background: rgba(26, 26, 26, 0.5);
     padding: 20px;
     border-radius: 10px;
     border-bottom: 1px solid var(--border-color);
@@ -200,7 +200,7 @@ body[data-theme="dark"] .post-list-item {
 }
 
 body[data-theme="dark"] .post-list-item:hover {
-    box-shadow: 0 6px 12px rgba(100, 181, 246, 0.2);
+    box-shadow: 0 6px 12px rgba(187, 134, 252, 0.15);
     transform: translateY(-2px);
 }
 
@@ -224,7 +224,7 @@ body[data-theme="dark"] .post-list-item:hover {
 }
 
 body[data-theme="dark"] .post-list-title a:hover {
-    text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+    text-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
 }
 
 .post-list-meta {
@@ -249,7 +249,7 @@ body[data-theme="dark"] .post-list-title a:hover {
 }
 
 body[data-theme="dark"] .post-title {
-    text-shadow: 0 0 20px rgba(100, 181, 246, 0.3);
+    text-shadow: 0 0 20px rgba(187, 134, 252, 0.2);
 }
 
 .post-meta {
@@ -270,7 +270,7 @@ body[data-theme="dark"] .post-title {
 }
 
 body[data-theme="dark"] .post-content h2 {
-    text-shadow: 0 0 15px rgba(100, 181, 246, 0.2);
+    text-shadow: 0 0 15px rgba(187, 134, 252, 0.15);
 }
 
 .post-content h3 {
@@ -316,7 +316,7 @@ body[data-theme="dark"] .post-content code {
 
 body[data-theme="dark"] .post-content pre {
     border: 1px solid var(--border-color);
-    box-shadow: 0 0 10px rgba(100, 181, 246, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .post-content pre code {
@@ -344,11 +344,11 @@ body[data-theme="dark"] .post-content pre {
 }
 
 body[data-theme="dark"] .post-tags .tag {
-    box-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.2);
 }
 
 body[data-theme="dark"] .post-tags .tag:hover {
-    box-shadow: 0 0 15px rgba(100, 181, 246, 0.5);
+    box-shadow: 0 0 15px rgba(187, 134, 252, 0.3);
     transform: scale(1.05);
 }
 
@@ -363,7 +363,7 @@ body[data-theme="dark"] .post-tags .tag:hover {
 }
 
 body[data-theme="dark"] .page-title {
-    text-shadow: 0 0 20px rgba(100, 181, 246, 0.3);
+    text-shadow: 0 0 20px rgba(187, 134, 252, 0.2);
 }
 
 .page-content {
@@ -381,7 +381,7 @@ body[data-theme="dark"] .page-title {
 }
 
 body[data-theme="dark"] .site-footer {
-    box-shadow: 0 -2px 15px rgba(100, 181, 246, 0.2);
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.5);
 }
 
 .footer-content {
@@ -400,7 +400,7 @@ body[data-theme="dark"] .site-footer {
 }
 
 body[data-theme="dark"] .footer-col h3 {
-    text-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+    text-shadow: 0 0 10px rgba(187, 134, 252, 0.2);
 }
 
 .footer-col p {
@@ -436,7 +436,7 @@ body[data-theme="dark"] .social-links a {
 
 body[data-theme="dark"] .social-links a:hover {
     color: var(--link-hover);
-    text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+    text-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
 }
 
 .footer-bottom {
