@@ -34,7 +34,6 @@ This blog covers a wide range of topics including:
 I love connecting with fellow developers and learners. Feel free to reach out through:
 
 - **GitHub**: [@{{ site.github_username }}](https://github.com/{{ site.github_username }})
-- **Email**: {{ site.email }}
 
 Whether you have questions, suggestions, or just want to share your own coding journey, I'd love to hear from you!
 
