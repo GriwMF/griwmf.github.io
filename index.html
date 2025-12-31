@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="home">
+    <h1>Welcome to My Coding Journey</h1>
+    
+    <div class="intro">
+        <p>Hi! I'm documenting my adventure through the world of software development. 
+        This blog is a collection of my experiences, lessons learned, challenges overcome, 
+        and insights gained along the way.</p>
+        
+        <p>Whether you're a fellow developer, aspiring programmer, or just curious about 
+        the coding world, I hope you'll find something valuable here. Join me as I explore 
+        new technologies, tackle interesting problems, and continuously grow as a developer.</p>
+    </div>
+    
+    <h2>Recent Posts</h2>
+    
+    <ul class="post-list">
+        {% for post in site.posts limit:5 %}
+        <li class="post-list-item">
+            <h3 class="post-list-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            <p class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+            <p class="post-list-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <p><a href="{{ '/blog' | relative_url }}">View all posts →</a></p>
+</div>

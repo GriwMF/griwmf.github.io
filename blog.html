@@ -1,0 +1,19 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+<h1>All Posts</h1>
+
+<ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-list-item">
+        <h3 class="post-list-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="post-list-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <p class="post-list-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+    </li>
+    {% endfor %}
+</ul>
