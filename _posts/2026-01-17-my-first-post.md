@@ -11,9 +11,9 @@ I’ve been harboring the idea of a blog for a while, and today I'm finally taki
 Every developer's journey starts somewhere, and mine began with a simple Soviet clone of the ZX Spectrum called the "Ariel".
 
 ## The Spark
-It was the early 2000s: no internet, no home PC, no mobile phones. Only the TV, a cassette player with a couple of tapes, or walking outside. Oh yes, and the NES console clone with about five cartridges. Do you get the atmosphere? It was basically the opposite of today's world, where we're bored watching TikToks or scrolling through Instagram. At that time, anything could be exciting. And I was much younger.
+It was the early 2000s: no internet, no home PC, no mobile phones. Only the TV, a cassette player with a couple of tapes, and the outdoors. Oh yes, and the NES console clone with about five cartridges. Do you get the atmosphere? It was basically the opposite of today's world, where we're bored watching TikToks or scrolling through Instagram. At that time, anything could be exciting. And I was much younger.
 
-While poking around the house, I stumbled upon an old Ariel computer. I already had some knowledge about Spectrum clones—in the 90s my dad had one, and I remember playing some games on it. But this Ariel was different; it was never used in our family, so I had the privilege of making "first contact." The other important difference was that this one had a user guide.
+While poking around the house, I stumbled upon an old Ariel computer. I already had some knowledge about Spectrum clones - in the 90s my dad had one, and I remember playing some games on it. But this Ariel was different; it was never used in our family, so I had the privilege of making "first contact." The other important difference was that this one had a user guide.
 
 I remember sitting down with that guide, flipping through the pages, and seeing all those BASIC commands. It was like discovering a secret language. I was fascinated by the idea that I could uncover the mysteries of how this machine worked.
 
@@ -25,7 +25,7 @@ Long story short, we had a neighbor who was a university professor in computer s
 
 I still remember how hard it was to solve the "find the biggest of three numbers" problem. I did it the most obvious way with nested conditions, and he asked, "What if there were a hundred numbers, not three?" That was a frustrating moment, and it confused me until he showed a brilliant solution using an additional variable to hold the current maximum. Now I see that this was also an introduction to the concept of iteration.
 
-There are too many stories to tell, but the main point is that this experience ignited a passion for programming in me. From that point on, I learned Pascal and then Delphi. Do you remember how I started with no PC at home? Guess what—they had PCs at the university! I was allowed to use them after classes. So, I spent hours there typing code, running and debugging programs, learning from my mistakes, and sometimes debating with more experienced university students. It was awesome practice for a kid! I even skipped meals because I was so engrossed in coding.
+There are too many stories to tell, but the main point is that this experience ignited a passion for programming in me. From that point on, I learned Pascal and then Delphi. Do you remember how I started with no PC at home? Guess what - they had PCs at the university! I was allowed to use them after classes. So, I spent hours there typing code, running and debugging programs, learning from my mistakes, and sometimes debating with more experienced university students. It was awesome practice for a kid! I even skipped meals because I was so engrossed in coding.
 
 ## The Real Project
 The peak of my early adolescence coding journey was "The Real Project." Not a simple database, nor some kid's game, but a full-fledged application for managing the university's students for an advanced training program.
