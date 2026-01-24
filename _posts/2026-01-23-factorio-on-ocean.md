@@ -15,8 +15,8 @@ Actually, it's not that clear what kind of server you need for Factorio. There a
 
 It's my first time using DigitalOcean, but creating a droplet was pretty straightforward. Choose the plan, add SSH keys and pick the image. I want to use Debian by the way. Two reasons - one I don't like that they ship Snap packages by default in Ubuntu, and second - I never used Debian on its own, so it's a good opportunity to try it out.
 
-> **DigitalOcean NOTE:** I'm not able to find dark mode for the website. Do they have it? Darkreader works fine, but still I fell they should have it.
-> The droplet system seems to try to be simple, but it's a bit comfusing at first. You have only predefined plans, you can then resize the droplet between those plans, but you can keep the disk size. And if you've increased the disk size, you can't go back. As for me the AWS/Oracle way of defining your own configuration seems more natural.
+> **DigitalOcean NOTE:** I couldn't find a dark mode for the website. Do they have one? DarkReader works fine, but I still feel they should have it.
+> The droplet system seems to try to be simple, but it's a bit confusing at first. You only have predefined plans; you can then resize the droplet between those plans, but you can keep the disk size. And if you've increased the disk size, you can't go back. As for me the AWS/Oracle way of defining your own configuration seems more natural.
 > Oh, yeah, if you are new to DigitalOcean, you can use my [referral link](https://m.do.co/c/123c3d010fd7) to get $200 credit for 60 days and try it out.
 
 I've probably missed it, but I haven't seen a note on how to connect to the droplet on the page. Or maybe it's only in the documentation. Anyway, there is an IP address assigned to your droplet on the dashboard, and I've guessed correctly that simple `ssh root@your_droplet_ip` would work. You should've added your SSH key during the droplet creation of course.
