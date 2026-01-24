@@ -87,7 +87,7 @@ apt-get install iptables-persistent
 netfilter-persistent save
 ```
 
-> **Note:** At this point I had to go to sleep, so my droplet was running overnight and created field says "11 hours ago". The strange thing is that I can not find any info on the bidded price. I still see "Estimated costs: $0.00" on the account dashboard and I wasn't able to find other meaningful billing info. It seems that it will appear later, but it's a bit confusing compared to other cloud providers. I like to see how much I'm spending in the real time.
+> **Note:** At this point I had to go to sleep, so my droplet was running overnight and created field says "11 hours ago". The strange thing is that I can not find any info on the money spent. I still see "Estimated costs: $0.00" on the account dashboard and I wasn't able to find other meaningful billing info. It seems that it will appear later, but it's a bit confusing compared to other cloud providers. I like to see how much I'm spending in the real time.
 
 ## Map, Settings and Mods
 Now as we have the server running, it's time to configure the last bits. First, you probably want to assign yourself as an admin. To do that, from the factorio home directory, open the server-adminlist.json and add your in-game username as an array:
