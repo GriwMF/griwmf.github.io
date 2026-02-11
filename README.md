@@ -1,4 +1,10 @@
+# A Digital Playground
+
 [ahryhorenko.me](https://ahryhorenko.me)
 
-# griwmf.github.io
-Just a blog
+A space where code, curiosity, and a touch of AI slop come to life. This repository contains the source for a personal blog documenting experiments in automation, digital agency, and the evolving software frontier.
+
+### Stack
+- **Engine:** Jekyll
+- **Format:** Markdown & Liquid
+- **Platform:** GitHub Pages
