@@ -1,0 +1,71 @@
+<div id="pull-cord-container"
+     role="switch"
+     aria-checked="false"
+     aria-label="Toggle dark mode"
+     tabindex="0"
+     style="--pull-offset: -170px;">
+  <svg aria-hidden="true"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 60 340"
+       width="60"
+       height="340">
+    <defs>
+      <!-- Gaussian blur for bulb glow -->
+      <filter id="bulb-glow">
+        <feGaussianBlur stdDeviation="6" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+
+    <!-- Ceiling plate -->
+    <rect class="ceiling-plate" x="20" y="0" width="20" height="8" rx="2" />
+
+    <!-- Upper cord (ceiling to bulb) -->
+    <line class="cord upper-cord" x1="30" y1="8" x2="30" y2="90" />
+
+    <!-- Edison bulb group -->
+    <g class="bulb-group">
+      <!-- Metal screw base -->
+      <rect class="bulb-base" x="22" y="90" width="16" height="20" rx="2" />
+      <!-- Decorative thread lines on base -->
+      <line class="base-thread" x1="22" y1="95" x2="38" y2="95" />
+      <line class="base-thread" x1="22" y1="100" x2="38" y2="100" />
+      <line class="base-thread" x1="22" y1="105" x2="38" y2="105" />
+
+      <!-- Glass neck (narrowing from base to bulb body) -->
+      <path class="bulb-glass bulb-neck" d="M22,110 Q22,120 18,130 L42,130 Q38,120 38,110 Z" />
+
+      <!-- Glass bulb body (classic rounded shape) -->
+      <ellipse class="bulb-glass bulb-body" cx="30" cy="155" rx="18" ry="28" />
+
+      <!-- Filament support wires -->
+      <line class="filament-wire" x1="25" y1="115" x2="25" y2="145" />
+      <line class="filament-wire" x1="35" y1="115" x2="35" y2="145" />
+
+      <!-- Filament (zigzag) -->
+      <polyline class="filament" points="25,145 27,140 29,148 31,140 33,148 35,145" />
+
+      <!-- Glow overlay -->
+      <ellipse class="bulb-glow-overlay" cx="30" cy="155" rx="16" ry="24" filter="url(#bulb-glow)" />
+    </g>
+
+    <!-- Lower cord (bulb to tassel) -->
+    <line class="cord lower-cord" x1="30" y1="183" x2="30" y2="270" />
+
+    <!-- Tassel group -->
+    <g class="tassel-group">
+      <!-- Tassel cap/wrap -->
+      <ellipse class="tassel-cap" cx="30" cy="275" rx="8" ry="5" />
+      <!-- Tassel fringe strands (6 lines fanning out) -->
+      <line class="tassel-strand" x1="30" y1="280" x2="22" y2="305" />
+      <line class="tassel-strand" x1="30" y1="280" x2="25" y2="307" />
+      <line class="tassel-strand" x1="30" y1="280" x2="28" y2="308" />
+      <line class="tassel-strand" x1="30" y1="280" x2="32" y2="308" />
+      <line class="tassel-strand" x1="30" y1="280" x2="35" y2="307" />
+      <line class="tassel-strand" x1="30" y1="280" x2="38" y2="305" />
+    </g>
+  </svg>
+</div>

@@ -8,3 +8,7 @@ A space where code, curiosity, and a touch of AI slop come to life. This reposit
 - **Engine:** Jekyll
 - **Format:** Markdown & Liquid
 - **Platform:** GitHub Pages
+
+### To Run Locally
+`bundle exec jekyll serve`
+Browse to http://localhost:4000
