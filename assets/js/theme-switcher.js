@@ -1,8 +1,8 @@
 // Pull-Cord Theme Switcher
 (function() {
-    var REST_OFFSET = -170;       // px — hides bulb, shows tassel + cord bottom
-    var TOGGLE_THRESHOLD = 80;    // px — min pull distance to trigger toggle
-    var MAX_PULL = 140;           // px — maximum allowed pull distance
+    var REST_OFFSET = -85;        // px — hides most of cord, shows tassel
+    var TOGGLE_THRESHOLD = 60;    // px — min pull distance to trigger toggle
+    var MAX_PULL = 60;            // px — maximum allowed pull distance
     var MOBILE_BP = 768;          // px — mobile breakpoint
 
     var container = document.getElementById('pull-cord-container');
