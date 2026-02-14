@@ -47,6 +47,9 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Starfield background for dark theme */
@@ -214,7 +217,7 @@ body[data-theme="dark"] .tassel-strand {
 /* Main Content */
 .page-content {
     padding: 40px 0;
-    min-height: calc(100vh - 200px);
+    flex: 1;
 }
 
 /* Home Page */
@@ -454,6 +457,15 @@ body[data-theme="dark"] .site-footer {
 .footer-col h3 {
     font-size: 18px;
     margin-bottom: 15px;
+}
+
+.site-footer a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    opacity: 0.8;
 }
 
 body[data-theme="dark"] .footer-col h3 {

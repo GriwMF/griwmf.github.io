@@ -1,9 +1,8 @@
-// Pull-Cord Theme Switcher
 (function() {
-    var REST_OFFSET = -85;        // px — hides most of cord, shows tassel
-    var TOGGLE_THRESHOLD = 60;    // px — min pull distance to trigger toggle
-    var MAX_PULL = 60;            // px — maximum allowed pull distance
-    var MOBILE_BP = 768;          // px — mobile breakpoint
+    var REST_OFFSET = -85;
+    var TOGGLE_THRESHOLD = 20;
+    var MAX_PULL = 60;
+    var MOBILE_BP = 768;
 
     var container = document.getElementById('pull-cord-container');
     if (!container) return;
@@ -12,9 +11,8 @@
     var startY = 0;
     var pulling = false;
     var moved = false;
+    var toggled = false;
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-    // ── Helpers ──────────────────────────────────────────────
 
     function isDark() {
         return body.getAttribute('data-theme') === 'dark';
@@ -43,19 +41,16 @@
         container.classList.remove('is-pulling');
         container.classList.add('is-retracting');
         setOffset(REST_OFFSET);
-        // Clean up class after transition ends
         function onEnd() {
             container.classList.remove('is-retracting');
             container.removeEventListener('transitionend', onEnd);
         }
         container.addEventListener('transitionend', onEnd);
-        // Fallback cleanup if transition doesn't fire (reduced motion)
         setTimeout(function() {
             container.classList.remove('is-retracting');
         }, 500);
     }
 
-    // Rubber-band easing: past 80% of max, movement is dampened
     function rubberBand(delta) {
         var limit = MAX_PULL * 0.8;
         if (delta <= limit) return delta;
@@ -63,13 +58,9 @@
         return limit + over * 0.3;
     }
 
-    // ── Initialise theme from localStorage ──────────────────
-
     var saved = localStorage.getItem('theme') || 'light';
     applyTheme(saved === 'dark');
     setOffset(REST_OFFSET);
-
-    // ── Pointer interaction ─────────────────────────────────
 
     function getClientY(e) {
         if (e.touches && e.touches.length) return e.touches[0].clientY;
@@ -77,11 +68,11 @@
     }
 
     function onStart(e) {
-        // Only left mouse button or touch
         if (e.type === 'mousedown' && e.button !== 0) return;
         e.preventDefault();
         pulling = true;
         moved = false;
+        toggled = false;
         startY = getClientY(e);
         container.classList.add('is-pulling');
         container.classList.remove('is-retracting');
@@ -99,6 +90,16 @@
         if (delta < 0) delta = 0;
         if (delta > MAX_PULL) delta = MAX_PULL;
         if (delta > 3) moved = true;
+
+        if (!toggled && delta >= TOGGLE_THRESHOLD) {
+            toggled = true;
+            toggleTheme();
+        }
+
+        if (toggled && delta < (TOGGLE_THRESHOLD - 10)) {
+            toggled = false;
+        }
+
         var eased = rubberBand(delta);
         setOffset(REST_OFFSET + eased);
     }
@@ -111,35 +112,17 @@
         window.removeEventListener('touchmove', onMove);
         window.removeEventListener('touchend', onEnd);
 
-        var clientY = getClientY(e.changedTouches ? e.changedTouches[0] : e);
-        var delta = clientY - startY;
-        if (delta < 0) delta = 0;
-
-        if (!moved || delta <= 3) {
-            // Click — immediate toggle
-            toggleTheme();
-            retract();
-        } else if (delta >= TOGGLE_THRESHOLD) {
-            // Pulled far enough — toggle
-            toggleTheme();
-            retract();
-        } else {
-            // Didn't pull far enough — cancel
-            retract();
-        }
+        retract();
     }
 
     container.addEventListener('mousedown', onStart);
     container.addEventListener('touchstart', onStart, { passive: false });
-
-    // ── Keyboard support ────────────────────────────────────
 
     container.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
             e.preventDefault();
             toggleTheme();
 
-            // Brief pull-and-retract visual animation (skipped if reduced motion)
             if (!prefersReducedMotion.matches) {
                 container.classList.add('is-pulling');
                 setOffset(REST_OFFSET + 60);
@@ -149,8 +132,6 @@
             }
         }
     });
-
-    // ── Resize handler ──────────────────────────────────────
 
     var wasMobile = window.innerWidth <= MOBILE_BP;
 
