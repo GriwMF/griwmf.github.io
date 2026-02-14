@@ -11,4 +11,5 @@ A space where code, curiosity, and a touch of AI slop come to life. This reposit
 
 ### To Run Locally
 `bundle exec jekyll serve`
+
 Browse to http://localhost:4000
