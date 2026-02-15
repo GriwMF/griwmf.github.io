@@ -1,11 +1,9 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* CSS Variables for Light Theme */
 :root {
     --bg-primary: #fff;
     --bg-secondary: #f5f5f5;
@@ -23,7 +21,6 @@
     --shadow: rgba(0,0,0,0.1);
 }
 
-/* Dark Space Theme */
 body[data-theme="dark"] {
     --bg-primary: #0d0d0d;
     --bg-secondary: #1a1a1a;
@@ -52,7 +49,6 @@ body {
     min-height: 100vh;
 }
 
-/* Starfield background for dark theme */
 body[data-theme="dark"] {
     background: 
         radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.4), transparent),
@@ -79,7 +75,6 @@ body[data-theme="dark"] {
     padding: 0 20px;
 }
 
-/* Header Styles */
 .site-header {
     background: var(--bg-header);
     color: var(--text-light);
@@ -126,7 +121,6 @@ body[data-theme="dark"] .site-title {
     text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
 }
 
-/* Pull Cord Theme Toggle */
 #pull-cord-container {
     position: fixed;
     top: 0;
@@ -137,7 +131,6 @@ body[data-theme="dark"] .site-title {
     touch-action: none;
     user-select: none;
     cursor: grab;
-    /* --cord-length: 200px; configurable via inline style */
 }
 
 #pull-cord-container.is-pulling {
@@ -149,7 +142,6 @@ body[data-theme="dark"] .site-title {
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Ceiling plate */
 .ceiling-plate {
     fill: #555;
 }
@@ -158,7 +150,6 @@ body[data-theme="dark"] .ceiling-plate {
     fill: #777;
 }
 
-/* Cord strokes */
 .cord {
     stroke: #8B7355;
     stroke-width: 2.5;
@@ -169,7 +160,6 @@ body[data-theme="dark"] .cord {
     stroke: #a08b6e;
 }
 
-/* Tassel cap */
 .tassel-cap {
     fill: #a08040;
     stroke: #8B7355;
@@ -181,7 +171,6 @@ body[data-theme="dark"] .tassel-cap {
     stroke: #a08b6e;
 }
 
-/* Tassel strands */
 .tassel-strand {
     stroke: #c8a84e;
     stroke-width: 1.8;
@@ -192,7 +181,6 @@ body[data-theme="dark"] .tassel-strand {
     stroke: #a08040;
 }
 
-/* Focus styling for keyboard users */
 #pull-cord-container:focus-visible .tassel-cap {
     stroke: var(--link-hover, #3498db);
     stroke-width: 2;
@@ -206,7 +194,6 @@ body[data-theme="dark"] .tassel-strand {
     outline: none;
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     #pull-cord-container,
     #pull-cord-container.is-retracting {
@@ -214,13 +201,11 @@ body[data-theme="dark"] .tassel-strand {
     }
 }
 
-/* Main Content */
 .page-content {
     padding: 40px 0;
     flex: 1;
 }
 
-/* Home Page */
 .home h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -238,7 +223,6 @@ body[data-theme="dark"] .home h1 {
     color: var(--text-secondary);
 }
 
-/* Blog List */
 .post-list {
     list-style: none;
     margin-top: 30px;
@@ -297,7 +281,6 @@ body[data-theme="dark"] .post-list-title a:hover {
     color: var(--text-secondary);
 }
 
-/* Post Styles */
 .post-header {
     margin-bottom: 30px;
 }
@@ -385,6 +368,29 @@ body[data-theme="dark"] .post-content pre {
     border: none;
 }
 
+.post-content blockquote {
+    border-left: 4px solid var(--link-color);
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+body[data-theme="dark"] .post-content blockquote {
+    border-left-color: var(--link-color);
+    background-color: rgba(42, 26, 58, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-content blockquote p {
+    margin-bottom: 10px;
+}
+
+.post-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
 .post-tags {
     margin-top: 30px;
     padding-top: 20px;
@@ -412,7 +418,6 @@ body[data-theme="dark"] .post-tags .tag:hover {
     transform: scale(1.05);
 }
 
-/* Page Styles */
 .page-header {
     margin-bottom: 30px;
 }
@@ -431,7 +436,6 @@ body[data-theme="dark"] .page-title {
     line-height: 1.8;
 }
 
-/* Footer Styles */
 .site-footer {
     background: var(--bg-footer);
     color: var(--text-light);
@@ -527,7 +531,6 @@ body[data-theme="dark"] .footer-bottom p {
     color: var(--text-secondary);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .site-nav {
         float: none;
@@ -560,7 +563,6 @@ body[data-theme="dark"] .footer-bottom p {
     }
 }
 
-/* Additional Dark Theme Enhancements */
 body[data-theme="dark"] h2 {
     color: var(--text-primary);
 }
@@ -573,7 +575,6 @@ body[data-theme="dark"] a:hover {
     color: var(--link-hover);
 }
 
-/* Glow effects for dark theme */
 body[data-theme="dark"] .wrapper {
     position: relative;
 }
@@ -591,4 +592,57 @@ body[data-theme="dark"] .home {
     padding: 0;
     box-shadow: none;
     border: none;
+}
+
+.post-content img {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.post-content img:hover {
+    opacity: 0.9;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme="dark"] .lightbox img {
+    box-shadow: 0 0 30px rgba(187, 134, 252, 0.3);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lightbox-close:hover {
+    color: #ccc;
 }
