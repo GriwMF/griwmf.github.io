@@ -327,7 +327,8 @@ body[data-theme="dark"] .post-content h2 {
     margin-bottom: 20px;
 }
 
-.post-content ul, .post-content ol {
+.post-content ul, .post-content ol,
+.page-content ul, .page-content ol {
     margin-left: 30px;
     margin-bottom: 20px;
 }
@@ -365,6 +366,9 @@ body[data-theme="dark"] .post-content pre {
 .post-content pre code {
     background-color: transparent;
     padding: 0;
+}
+
+body[data-theme="dark"] .post-content pre code {
     border: none;
 }
 
