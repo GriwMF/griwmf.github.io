@@ -18,7 +18,7 @@
     --link-hover: #3498db;
     --tag-bg: #3498db;
     --code-bg: #f5f5f5;
-    --shadow: rgba(0,0,0,0.1);
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body[data-theme="dark"] {
@@ -50,7 +50,7 @@ body {
 }
 
 body[data-theme="dark"] {
-    background: 
+    background:
         radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.4), transparent),
         radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.3), transparent),
         radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.5), transparent),
@@ -65,8 +65,13 @@ body[data-theme="dark"] {
 }
 
 @keyframes starfield {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 .wrapper {
@@ -195,6 +200,7 @@ body[data-theme="dark"] .tassel-strand {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     #pull-cord-container,
     #pull-cord-container.is-retracting {
         transition: none !important;
@@ -237,7 +243,7 @@ body[data-theme="dark"] .home h1 {
 
 body[data-theme="dark"] .post-list-item {
     background: rgba(26, 26, 26, 0.5);
-    padding: 20px;
+    padding: 16px 20px;
     border-radius: 10px;
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -327,13 +333,16 @@ body[data-theme="dark"] .post-content h2 {
     margin-bottom: 20px;
 }
 
-.post-content ul, .post-content ol,
-.page-content ul, .page-content ol {
+.post-content ul,
+.post-content ol,
+.page-content ul:not(.post-list),
+.page-content ol:not(.post-list) {
     margin-left: 30px;
     margin-bottom: 20px;
 }
 
-.post-content li {
+.post-content li,
+.page-content li:not(.post-list-item) {
     margin-bottom: 10px;
 }
 
@@ -540,7 +549,7 @@ body[data-theme="dark"] .footer-bottom p {
         margin-top: 15px;
         flex-wrap: wrap;
     }
-    
+
     .site-nav a {
         display: inline-block;
         margin: 5px 10px 5px 0;
@@ -560,7 +569,7 @@ body[data-theme="dark"] .footer-bottom p {
     .footer-content {
         flex-direction: column;
     }
-    
+
     .footer-col {
         margin-bottom: 30px;
     }
