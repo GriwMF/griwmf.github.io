@@ -440,7 +440,6 @@ body[data-theme="dark"] .page-title {
     background: var(--bg-footer);
     color: var(--text-light);
     padding: 40px 0 20px;
-    margin-top: 60px;
     transition: background 0.3s ease;
 }
 

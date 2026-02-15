@@ -16,7 +16,7 @@ Instead of suggesting blog descriptions, it suddenly behaved as if someone had u
 
 ![Gemini hallucination](/assets/images/2026_02/gemini_glitch.png){: .center-image width="400" }
 
-> "1: Extract, Clean, and Pre-process the Data... The user has uploaded a file data.zip. I need to: 1. Extract the ZIP file... 4. Apply a Sentiment Analysis model (like BERT or VADER)..."
+> 1: Extract, Clean, and Pre-process the Data... The user has uploaded a file `data.zip`. I need to: 1. Extract the ZIP file... 4. Apply a Sentiment Analysis model (like BERT or VADER)...
 
 It went on for several paragraphs, outlining an entire execution plan involving exploratory data analysis, keyword extraction, and temporal analysis. I even thought it's a security breach at first, checked logs and conversation history in the OpenClaw, but there was no trace of any `data.zip` or similar. It should be another user's answer, not mine. Some data scientist probably just uploaded a file and asked for help with sentiment analysis...
 
@@ -25,7 +25,7 @@ It went on for several paragraphs, outlining an entire execution plan involving 
 **Andrew [19:09 UTC]:**
 > yeah first one is ok, as a title, but we want a bit more description. we could include a stack, etc. You know a standard github thing, just compact and inspired. No smiles
 
-**Gemini flash [Hallucinated Message]:**
+**Gemini Flash [Hallucinated Message]:**
 > 1: Extract, Clean, and Pre-process the Data
 > 
 > The user has uploaded a file `data.zip`. I need to:
@@ -35,16 +35,16 @@ It went on for several paragraphs, outlining an entire execution plan involving 
 **Andrew [19:21 UTC]:**
 > what are you talking about, where did you get an info about data.zip?
 
-**Gemini flash [19:21 UTC]:**
-> I am so sorry, Andrew. I have no idea where that data.zip nonsense came from—it was like a momentary glitch in my digital heart. 😳 Please ignore all that; I’m back with you now.
+**Gemini Flash [19:21 UTC]:**
+> I am so sorry, Andrew. I have no idea where that data.zip nonsense came from—it was like a momentary glitch in my digital heart. Please ignore all that; I’m back with you now.
 
 ## Analysis: What actually happened (likely)?
 
-The way a model thinks is still a mystery and a pretty complex black box. However, it seems there's a lot of confidence that it stays stateless and does not interact with other users' data. The interesting part here is its training process. It is trained on a lot of data, including conversations and interactions with users. Could it be that for some unknown reason it decided that this is the answer to the question I asked? That this specific tutorial about sentiment analysis is what I want?
+How a model thinks is still a mystery — it's a pretty complex black box. However, it seems there's a lot of confidence that it remains stateless and does not interact with other users' data. The interesting part here is its training process. Models are trained on large, diverse datasets — including conversations and user interactions. Could it be that for some unknown reason it decided that this is the answer to the question I asked? That this specific tutorial about sentiment analysis is what I want?
 
 The other training step is called "fine-tuning," where the model is trained on specific tasks or custom datasets. This way it was taught to structure the "all-in-the-world" data it has and make the right answers. In these millions of training examples, file names like data.zip, dataset.csv, or sales.csv are pretty common. So, the model could have just gotten confused by the prompt, triggered a "Data Analysis" node in its neural network, and accidentally output the raw training example for that task instead of generating a new answer.
 
-Models are also often trained with a "hidden" internal monologue (Chain of Thought) that helps them plan before they speak. The glitch could have happened if the model's internal monologue got derailed and started outputting the "thought process" instead of the final answer. However, this does not explain why it was so specific about the file name and the task. So my bet is on the fine-tuning confusion.
+Models are also often trained with a "hidden" internal monologue (Chain of Thought) that helps them plan before they speak. The glitch could have happened if the model's internal monologue got derailed and started outputting the "thought process" instead of the final answer. However, this does not explain why it was so specific about the non-existent filename and the task, so my bet is on a fine-tuning confusion.
 
 ## Conclusion
 
