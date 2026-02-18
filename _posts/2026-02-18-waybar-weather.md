@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Weather Widget for Waybar"
-date: 2026-02-18 19:00:00 -0000
+date: 2026-02-18 18:00:00 -0000
 categories: linux ricing
 tags: [waybar, hyprland, weather, bash, open-meteo, linux]
 ---
