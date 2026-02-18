@@ -50,4 +50,4 @@ The hourly section shows five data points through the day. The script figures ou
 
 It's about 170 lines of Bash. Not the cleanest code in the world, but it does one thing and does it well. No daemons, no config files, no build steps. Copy, set coordinates, done.
 
-The source is on [GitHub](https://github.com/griwmf/waybar-weather). Feel free to fork it or just steal the parts you need.
+The source is on [GitHub](https://github.com/GriwMF/simplest-waybar-weather). Feel free to fork it or just steal the parts you need.
