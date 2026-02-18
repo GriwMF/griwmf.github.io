@@ -18,7 +18,7 @@ So I wrote my own. It uses [Open-Meteo](https://open-meteo.com/), which is compl
 
 ## What It Does
 
-![Weather widget](/assets/images/2026_02/weather-preview.jpg){: .center-image width="400"}
+![Weather widget](/assets/images/2026_02/weather-preview.png){: .center-image width="400"}
 
 The module shows a weather icon and current temperature on the bar. Hover it, and you get a monospace tooltip with:
 
